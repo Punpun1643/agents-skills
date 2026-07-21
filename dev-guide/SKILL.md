@@ -183,6 +183,12 @@ Notes on the pattern:
   (e.g. a `util` package) is better as a bulleted list, not fake steps.
 - **End with connections.** "Used by X to do Y; depends on Z for W." This is what lets a reader
   navigate outward from any component, and it's the first thing that goes stale on a refactor.
+- **Enumerate fields/attributes/columns as a table, never as an inline run.** When a type, entity,
+  or DB table has more than ~3 fields to spell out, use a markdown table (one row per field, with
+  `Field | Type | Notes` or similar) or an `erDiagram` / `classDiagram` — not a long sentence of
+  `·`- or comma-separated names. Inline runs like `id (PK) · wikiId → wikis · slug · title · …`
+  are unscannable: the reader can't line up a name with its type or constraint. Define the notation
+  once above the tables (PK, `→` for foreign key, `?` for nullable) so each cell stays terse.
 - Add a diagram to the section only when the interaction is non-trivial enough that prose alone
   is hard to follow.
 
@@ -243,6 +249,8 @@ Before declaring the guide done or updated, verify:
 - [ ] Every component section leads with a one-sentence responsibility.
 - [ ] Every source link resolves to an existing path.
 - [ ] Every diagram is the correct type for what it shows, holds one idea, and matches current code.
+- [ ] Field/attribute/column lists with more than ~3 entries are tables (or an ER/class diagram),
+      not inline `·`- or comma-separated runs.
 - [ ] Every documented flow traces the actual call chain.
 - [ ] No documented-but-deleted components remain; no architecturally significant component is
       silently missing.
