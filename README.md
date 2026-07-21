@@ -8,15 +8,13 @@ Each skill is a directory containing a `SKILL.md` (instructions + a description 
 
 Each skill triggers automatically when a request matches its description, or explicitly via its slash command (e.g. `/git-commit`). See [Usage](#usage) for details.
 
-| Skill | What it does | Demo | Credit |
-|-------|--------------|------|--------|
-| [`dev-guide`](dev-guide/SKILL.md) | Create and maintain a repo's developer/architecture guide, grounded in real code with the right diagram type for each idea. | _TODO_ | — |
-| [`excalidraw`](excalidraw/SKILL.md) | Generate architecture diagrams as `.excalidraw` files from codebase analysis, with optional PNG/SVG export. | _TODO_ | Adapted from [ooiyeefei/ccc](https://github.com/ooiyeefei/ccc/tree/main/skills/excalidraw) |
-| [`git-commit`](git-commit/SKILL.md) | Write Conventional Commits messages and split a working tree into clean, independent commits. | _TODO_ | — |
-| [`product-designer`](product-designer/SKILL.md) | Turn a rough product idea into a buildable MVP brief — requirements, user stories, data model, metrics — via human-centered design. | _TODO_ | — |
-| [`readme-writer`](readme-writer/SKILL.md) | Write, overhaul, or fix a project's README by the reader-involvement gradient, never fabricating commands or badges. | _TODO_ | — |
-
-> **Screenshots pending.** Drop a capture of each skill at `assets/<skill>.png`, then replace the matching `_TODO_` cell with `![demo](assets/<skill>.png)`.
+| Skill | What it does | Credit |
+|-------|--------------|--------|
+| [`dev-guide`](dev-guide/SKILL.md) | Create and maintain a repo's developer/architecture guide, grounded in real code with the right diagram type for each idea. | — |
+| [`excalidraw`](excalidraw/SKILL.md) | Generate architecture diagrams as `.excalidraw` files from codebase analysis, with optional PNG/SVG export. | Adapted from [ooiyeefei/ccc](https://github.com/ooiyeefei/ccc/tree/main/skills/excalidraw) |
+| [`git-commit`](git-commit/SKILL.md) | Write Conventional Commits messages and split a working tree into clean, independent commits. | — |
+| [`product-designer`](product-designer/SKILL.md) | Turn a rough product idea into a buildable MVP brief — requirements, user stories, data model, metrics — via human-centered design. | — |
+| [`readme-writer`](readme-writer/SKILL.md) | Write, overhaul, or fix a project's README by the reader-involvement gradient, never fabricating commands or badges. | — |
 
 ### `dev-guide`
 
@@ -43,6 +41,10 @@ Generate architecture diagrams as `.excalidraw` files from codebase analysis. [`
 ### `git-commit`
 
 Write Conventional Commits messages and structure a working tree into clean commits. [`SKILL.md`](git-commit/SKILL.md)
+
+![Real `git log` from this repo after running the git-commit skill](assets/git-commit.png)
+
+*A real capture of this repository's history — the commits above were written by this skill.*
 
 - Reads the actual diff before composing — message reflects the change, not the prompt.
 - Splits a mixed working tree into the smallest set of independent, self-contained commits.

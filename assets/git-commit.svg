@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="520" viewBox="0 0 1040 520">
+  <rect width="1040" height="520" rx="14" fill="#0d1117"/>
+  <rect width="1040" height="44" rx="14" fill="#2b2d31"/>
+  <rect y="30" width="1040" height="14" fill="#2b2d31"/>
+  <circle cx="26" cy="22" r="7" fill="#ff5f57"/><circle cx="50" cy="22" r="7" fill="#febc2e"/><circle cx="74" cy="22" r="7" fill="#28c840"/>
+  <text x="520" y="27" text-anchor="middle" font-family="Menlo, 'DejaVu Sans Mono', monospace" font-size="13" fill="#c7c9cf">papattarada — skills — zsh</text>
+  <g transform="translate(0,44)"><text x="34" y="52" font-family="Menlo, 'DejaVu Sans Mono', monospace" font-size="17" xml:space="preserve"><tspan fill="#8b949e">~/skills </tspan><tspan fill="#7ee787">$ </tspan><tspan fill="#e6edf3">git log --graph --oneline -8</tspan></text>
+  <text x="34" y="86" font-family="Menlo, 'DejaVu Sans Mono', monospace" font-size="17" xml:space="preserve"><tspan fill="#e6edf3">* </tspan><tspan fill="#e3b341">8179470 </tspan><tspan fill="#c9d1d9">docs: expand repository README with per-skill sections</tspan></text>
+  <text x="34" y="120" font-family="Menlo, 'DejaVu Sans Mono', monospace" font-size="17" xml:space="preserve"><tspan fill="#e6edf3">* </tspan><tspan fill="#e3b341">d56794e </tspan><tspan fill="#c9d1d9">docs(excalidraw): credit upstream ccc source</tspan></text>
+  <text x="34" y="154" font-family="Menlo, 'DejaVu Sans Mono', monospace" font-size="17" xml:space="preserve"><tspan fill="#e6edf3">* </tspan><tspan fill="#e3b341">42d1422 </tspan><tspan fill="#c9d1d9">chore: add MIT license</tspan></text>
+  <text x="34" y="188" font-family="Menlo, 'DejaVu Sans Mono', monospace" font-size="17" xml:space="preserve"><tspan fill="#e6edf3">* </tspan><tspan fill="#e3b341">4497b3f </tspan><tspan fill="#c9d1d9">docs: add repository README</tspan></text>
+  <text x="34" y="222" font-family="Menlo, 'DejaVu Sans Mono', monospace" font-size="17" xml:space="preserve"><tspan fill="#e6edf3">* </tspan><tspan fill="#e3b341">0fe2167 </tspan><tspan fill="#c9d1d9">chore: remove stock-analyzer skill</tspan></text>
+  <text x="34" y="256" font-family="Menlo, 'DejaVu Sans Mono', monospace" font-size="17" xml:space="preserve"><tspan fill="#e6edf3">* </tspan><tspan fill="#e3b341">2876dc6 </tspan><tspan fill="#c9d1d9">chore: remove symlinked skills</tspan></text>
+  <text x="34" y="290" font-family="Menlo, 'DejaVu Sans Mono', monospace" font-size="17" xml:space="preserve"><tspan fill="#e6edf3">* </tspan><tspan fill="#e3b341">3a287d4 </tspan><tspan fill="#c9d1d9">docs(dev-guide): require tables for field lists</tspan></text>
+  <text x="34" y="324" font-family="Menlo, 'DejaVu Sans Mono', monospace" font-size="17" xml:space="preserve"><tspan fill="#e6edf3">* </tspan><tspan fill="#e3b341">91a0a06 </tspan><tspan fill="#c9d1d9">docs(excalidraw): add reference material</tspan></text></g>
+</svg>
