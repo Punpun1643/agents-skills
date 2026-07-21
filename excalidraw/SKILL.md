@@ -314,3 +314,9 @@ Before writing file:
 - **Filename:** Descriptive, e.g., `system-architecture.excalidraw`
 - **Exports (optional):** `system-architecture.svg` and/or `system-architecture.png` in same directory
 - **Testing:** Open `.excalidraw` in https://excalidraw.com or VS Code extension; `.svg` and `.png` can be viewed directly or embedded in documentation
+
+---
+
+## Credits
+
+Adapted from [ooiyeefei/ccc](https://github.com/ooiyeefei/ccc/tree/main/skills/excalidraw).
