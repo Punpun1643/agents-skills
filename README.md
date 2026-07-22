@@ -14,6 +14,8 @@ Each skill triggers automatically when a request matches its description, or exp
 | [`product-designer`](product-designer/SKILL.md) | Turn a rough product idea into a buildable MVP brief — requirements, user stories, data model, metrics — via human-centered design. | HCD principles from [_The Design of Everyday Things_](https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things) |
 | [`readme-writer`](readme-writer/SKILL.md)       | Write, overhaul, or fix a project's README by the reader-involvement gradient, never fabricating commands or badges.                | Based on [makeareadme.com](https://www.makeareadme.com)                                                            |
 
+---
+
 ### [dev-guide](dev-guide/)
 
 Create and maintain a repository's developer/architecture guide.
@@ -78,6 +80,8 @@ Write, overhaul, or fix a project's README.
 - Reference material: [`examples`](readme-writer/references/examples.md), [`section-checklist`](readme-writer/references/section-checklist.md).
 
 _Invoke:_ `/readme-writer`, or "make a readme", "document this project".
+
+---
 
 ## Install
 
