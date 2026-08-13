@@ -19,7 +19,7 @@ Generate architecture diagrams as `.excalidraw` files directly from codebase ana
 "Visualize this codebase as an excalidraw file"
 ```
 
-**Claude Code will:**
+**The skill will:**
 
 1. Analyze the codebase (any language/framework)
 2. Identify components, services, databases, APIs

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Excalidraw Diagrams"
+  short_description: "Create editable architecture diagrams in Excalidraw"
+  default_prompt: "Use $excalidraw to create an editable architecture diagram for this codebase."

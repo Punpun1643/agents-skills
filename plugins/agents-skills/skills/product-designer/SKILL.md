@@ -1,18 +1,15 @@
 ---
 name: product-designer
 description: >-
-    Produce and refine product-design briefs — the document that turns a rough product
-    idea into a buildable MVP spec: vision, personas, jobs-to-be-done, goals/non-goals,
-    numbered functional requirements, key screens, data model, user stories with
-    acceptance criteria, user journeys, success metrics, risks, and milestones, all
-    grounded in human-centered-design principles. Use this skill WHENEVER the user wants
-    to write, expand, critique, or restructure a product brief, MVP plan, PRD, feature
-    spec, or set of user stories — including phrasings like "write a product spec for X",
-    "turn this idea into an MVP plan", "draft the requirements", "write user stories with
-    acceptance criteria", "design this feature", "what should the MVP scope be", "critique
-    this product plan", or "make a PRD". Also use it proactively when a user describes a
-    product idea and asks how to scope or structure it. The skill enforces HCD principles
-    (visible constraints, reversibility, informative feedback, traceability) and that every
+    Produce and refine product-design briefs that turn rough ideas into buildable MVP
+    specifications with vision, personas, jobs-to-be-done, goals and non-goals, numbered
+    requirements, key screens, a data model, user stories with acceptance criteria,
+    journeys, metrics, risks, and milestones. Use whenever the user wants to write,
+    expand, critique, or restructure a product brief, MVP plan, PRD, feature spec, or set
+    of user stories, including requests such as "write a product spec", "turn this idea
+    into an MVP plan", "draft the requirements", "design this feature", "define the MVP
+    scope", or "make a PRD". Also use when a user describes a product idea and asks how
+    to scope or structure it. Enforce human-centered design principles and ensure every
     requirement is testable and tied to a real user need.
 ---
 

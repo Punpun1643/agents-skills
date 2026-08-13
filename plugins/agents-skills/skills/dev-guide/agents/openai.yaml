@@ -1,0 +1,4 @@
+interface:
+  display_name: "Developer Guide"
+  short_description: "Create accurate developer and architecture guides"
+  default_prompt: "Use $dev-guide to create or update an accurate developer guide for this repository."

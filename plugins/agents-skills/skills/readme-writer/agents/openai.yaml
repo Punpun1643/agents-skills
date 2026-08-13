@@ -1,0 +1,4 @@
+interface:
+  display_name: "README Writer"
+  short_description: "Write accurate, reader-focused project READMEs"
+  default_prompt: "Use $readme-writer to create or improve this repository README using only verified project facts."

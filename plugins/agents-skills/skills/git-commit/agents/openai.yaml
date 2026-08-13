@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Commit"
+  short_description: "Plan clean commits and write Conventional Commits"
+  default_prompt: "Use $git-commit to inspect these changes and organize them into clean Conventional Commits."

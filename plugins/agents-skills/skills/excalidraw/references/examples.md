@@ -12,7 +12,7 @@ This is a REFERENCE showing JSON structure. Replace IDs, labels, positions, and 
 {
   "type": "excalidraw",
   "version": 2,
-  "source": "claude-code-excalidraw-skill",
+  "source": "excalidraw-skill",
   "elements": [
     {
       "id": "user",

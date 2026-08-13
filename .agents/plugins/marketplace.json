@@ -1,0 +1,20 @@
+{
+  "name": "Punpun1643",
+  "interface": {
+    "displayName": "Punpun1643"
+  },
+  "plugins": [
+    {
+      "name": "agents-skills",
+      "source": {
+        "source": "local",
+        "path": "./plugins/agents-skills"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

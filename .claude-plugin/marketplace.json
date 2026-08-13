@@ -1,0 +1,14 @@
+{
+  "name": "Punpun1643",
+  "owner": {
+    "name": "Punpun1643"
+  },
+  "plugins": [
+    {
+      "name": "agents-skills",
+      "source": "./plugins/agents-skills",
+      "description": "A focused collection of reusable documentation, product design, diagramming, and Git workflow skills.",
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "agents-skills",
+  "version": "0.1.0",
+  "description": "A focused collection of reusable documentation, product design, diagramming, and Git workflow skills.",
+  "author": {
+    "name": "Punpun1643",
+    "url": "https://github.com/Punpun1643"
+  },
+  "homepage": "https://github.com/Punpun1643/agents-skills",
+  "repository": "https://github.com/Punpun1643/agents-skills",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "codex",
+    "documentation",
+    "productivity"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Punpun's Agent Skills",
+    "shortDescription": "Five focused skills for docs, design, diagrams, and Git",
+    "longDescription": "Create accurate developer guides and READMEs, design buildable MVP briefs, generate editable Excalidraw architecture diagrams, and organize changes into clean Conventional Commits.",
+    "developerName": "Punpun1643",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/Punpun1643/agents-skills",
+    "defaultPrompt": [
+      "Use $readme-writer to improve this repository's README.",
+      "Use $dev-guide to document this codebase's architecture.",
+      "Use $git-commit to organize these changes into clean commits."
+    ]
+  }
+}

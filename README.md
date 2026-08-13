@@ -1,146 +1,151 @@
-# claude-skills
+# agents-skills
 
-A personal collection of [Claude Code](https://docs.claude.com/en/docs/claude-code) Agent Skills — reusable, model-invoked playbooks that teach Claude how to perform specific documentation and workflow tasks to a consistent standard.
+A collection of portable [Agent Skills](https://agentskills.io/) for Claude Code and Codex. Each skill is a reusable, model-invoked playbook for a focused documentation or development workflow.
 
 ## Skills
 
-Each skill triggers automatically when a request matches its description, or explicitly via its slash command (e.g. `/git-commit`). See [Usage](#usage) for details.
-
-| Skill                                           | What it does                                                                                                                                              | Credit                                                                                                               |
-| ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| [`dev-guide`](dev-guide/SKILL.md)               | Create and maintain a repo's developer/architecture guide, grounded in real code with the right diagram type for each idea.                               | —                                                                                                                   |
-| [`excalidraw`](excalidraw/SKILL.md)             | Generate architecture diagrams as `.excalidraw` files from codebase analysis, with optional PNG/SVG export.                                               | Adapted from [ooiyeefei/ccc](https://github.com/ooiyeefei/ccc/tree/main/skills/excalidraw)                          |
-| [`git-commit`](git-commit/SKILL.md)             | Write commit messages in the Conventional Commits style and split a working tree into clean, independent commits.                                         | Based on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)                                     |
-| [`product-designer`](product-designer/SKILL.md) | Turn a rough product idea into a buildable MVP brief — requirements, user stories, data model, metrics — via human-centered design.                       | HCD principles from [_The Design of Everyday Things_](https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things)  |
-| [`readme-writer`](readme-writer/SKILL.md)       | Write, overhaul, or fix a project's README by the reader-involvement gradient, never fabricating commands or badges.                                      | Based on [makeareadme.com](https://www.makeareadme.com)                                                             |
-| [`teach`](https://www.aihero.dev/skills-teach)  | Turn the current directory into a stateful, multi-session learning workspace that teaches one topic through short, citation-grounded interactive lessons. | By Matt Pocock — [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/productivity/teach) (MIT) |
+| Skill | What it does | Credit |
+| --- | --- | --- |
+| [`dev-guide`](plugins/agents-skills/skills/dev-guide/SKILL.md) | Create and maintain a repository's developer or architecture guide, grounded in real code. | — |
+| [`excalidraw`](plugins/agents-skills/skills/excalidraw/SKILL.md) | Generate architecture diagrams as editable `.excalidraw` files, with optional PNG/SVG export. | Adapted from [ooiyeefei/ccc](https://github.com/ooiyeefei/ccc/tree/main/skills/excalidraw) |
+| [`git-commit`](plugins/agents-skills/skills/git-commit/SKILL.md) | Write Conventional Commits and split a working tree into clean, independent commits. | Based on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) |
+| [`product-designer`](plugins/agents-skills/skills/product-designer/SKILL.md) | Turn a rough product idea into a testable, buildable MVP brief. | HCD principles from [_The Design of Everyday Things_](https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things) |
+| [`readme-writer`](plugins/agents-skills/skills/readme-writer/SKILL.md) | Write or improve a project's README without fabricating commands, badges, or behavior. | Based on [makeareadme.com](https://www.makeareadme.com) |
+| [`teach`](https://www.aihero.dev/skills-teach) | Turn the current directory into a stateful, multi-session learning workspace with short, citation-grounded lessons. | By Matt Pocock — [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/productivity/teach) (MIT) |
 
 ---
 
-### [dev-guide](dev-guide/)
+### dev-guide
 
-Create and maintain a repository's developer/architecture guide.
+Create and maintain a repository's developer or architecture guide.
 
-- Grounds every description in the actual code.
-- Picks the correct diagram type for what each diagram shows.
-- Enforces tables for field/attribute/column lists.
-- Reference material: component [`structure`](dev-guide/references/structure.md), [`diagrams`](dev-guide/references/diagrams.md).
+- Grounds every description in code that was actually inspected.
+- Chooses the correct diagram type for each idea.
+- Links components to their source and traces real data and control flows.
+- Includes references for [guide structure](plugins/agents-skills/skills/dev-guide/references/structure.md) and [diagrams](plugins/agents-skills/skills/dev-guide/references/diagrams.md).
 
-_Invoke:_ `/dev-guide`, or "update the dev guide", "document this module".
-
----
-
-### [excalidraw](excalidraw/)
-
-Generate architecture diagrams as `.excalidraw` files from codebase analysis.
-
-- Produces editable `.excalidraw` JSON, with optional PNG/SVG export via Playwright.
-- Cloud-provider color palettes (AWS, Azure, GCP, Kubernetes).
-- Handles arrow routing, bindings, and staggering to avoid overlap.
-- Reference material for [JSON format](excalidraw/references/json-format.md), [arrows](excalidraw/references/arrows.md), [colors](excalidraw/references/colors.md), [examples](excalidraw/references/examples.md), [validation](excalidraw/references/validation.md), and [export](excalidraw/references/export.md).
-
-_Invoke:_ `/excalidraw`, or "create an architecture diagram", "export this to PNG".
+Invoke with `$dev-guide` in Codex, `/dev-guide` in Claude Code, or ask to “update the dev guide” or “document this module.”
 
 ---
 
-### [git-commit](git-commit/)
+### excalidraw
 
-Write Conventional Commits messages and structure a working tree into clean commits.
+Generate architecture diagrams as editable `.excalidraw` files from codebase analysis.
 
-![Real `git log` from this repo after running the git-commit skill](assets/git-commit.png)
+- Maps components, services, databases, APIs, and data flows.
+- Uses cloud-provider color palettes for AWS, Azure, GCP, and Kubernetes.
+- Handles arrow routing, bindings, and staggering to reduce overlap.
+- Can export to PNG or SVG with Playwright.
 
-_A real capture of this repository's history — the commits above were written by this skill._
-
-- Reads the actual diff before composing — message reflects the change, not the prompt.
-- Splits a mixed working tree into the smallest set of independent, self-contained commits.
-- Applies the full type/scope/breaking-change convention and its semver mapping.
-
-_Invoke:_ `/git-commit`, or "commit this", "write a commit message".
+Invoke with `$excalidraw` in Codex, `/excalidraw` in Claude Code, or ask to “create an architecture diagram.”
 
 ---
 
-### [product-designer](product-designer/)
+### git-commit
 
-Turn a rough product idea into a buildable MVP brief.
+Write Conventional Commits and structure a working tree into clean commits.
 
-- Produces vision, personas, jobs-to-be-done, numbered functional requirements, data model, user stories with acceptance criteria, metrics, risks, and milestones.
-- Enforces human-centered-design principles and testable, traceable requirements.
-- Reference material: [`brief-template`](product-designer/references/brief-template.md), [`hcd-principles`](product-designer/references/hcd-principles.md).
+![Real `git log` from this repository after using the git-commit skill](assets/git-commit.png)
 
-_Invoke:_ `/product-designer`, or "write a PRD", "turn this idea into an MVP plan".
+_The commits in this capture were written using the skill._
+
+- Reads the actual diff before composing a message.
+- Splits mixed changes into independent, self-contained commits.
+- Applies Conventional Commits types, scopes, breaking changes, and SemVer mapping.
+
+Invoke with `$git-commit` in Codex, `/git-commit` in Claude Code, or ask to “commit this” or “write a commit message.”
 
 ---
 
-### [readme-writer](readme-writer/)
+### product-designer
+
+Turn a rough product idea into a focused MVP brief.
+
+- Produces personas, jobs-to-be-done, requirements, user stories, acceptance criteria, a data model, metrics, risks, and milestones.
+- Makes requirements testable and traceable to user needs.
+- Applies human-centered design principles throughout the workflow.
+
+Invoke with `$product-designer` in Codex, `/product-designer` in Claude Code, or ask to “write a PRD” or “turn this idea into an MVP plan.”
+
+---
+
+### readme-writer
 
 Write, overhaul, or fix a project's README.
 
-- Orders content by the reader-involvement gradient (identity → proof → quickstart → depth).
-- Never fabricates commands, badges, or output — unverifiable claims become visible TODOs.
-- Variant guidance for libraries, CLIs, research/ML repos, and web apps/services.
-- Reference material: [`examples`](readme-writer/references/examples.md), [`section-checklist`](readme-writer/references/section-checklist.md).
+- Orders content by the reader-involvement gradient: identity, proof, quickstart, depth.
+- Verifies commands, examples, configuration, and badges against the repository.
+- Adapts its structure for libraries, CLIs, research/ML projects, and web services.
 
-_Invoke:_ `/readme-writer`, or "make a readme", "document this project".
+Invoke with `$readme-writer` in Codex, `/readme-writer` in Claude Code, or ask to “make a README” or “document this project.”
 
----
+## Install for Codex
 
-## Install
-
-These are [Agent Skills](https://docs.claude.com/en/docs/claude-code/skills). Claude Code discovers a skill when its directory lives under a skills folder it scans — `~/.claude/skills/` for personal skills, or `.claude/skills/` inside a project.
-
-Clone the repo and create your personal skills directory:
+The repository is packaged as a [Codex plugin](https://developers.openai.com/plugins/build/plugins), so all five skills can be installed together from its marketplace:
 
 ```sh
-git clone https://github.com/Punpun1643/claude-skills.git
-cd claude-skills
+codex plugin marketplace add Punpun1643/agents-skills
+codex plugin add agents-skills@Punpun1643
+```
+
+Start a new Codex session after installation. Run `/skills` to browse the installed skills, mention one explicitly with `$skill-name`, or let Codex select one automatically from your request.
+
+### Install one standalone skill
+
+Clone the repository, then symlink one skill into Codex's personal skills directory:
+
+```sh
+git clone https://github.com/Punpun1643/agents-skills.git
+cd agents-skills
+mkdir -p ~/.agents/skills
+ln -s "$PWD/plugins/agents-skills/skills/readme-writer" ~/.agents/skills/readme-writer
+```
+
+Replace `readme-writer` with any skill name from the table above. Codex supports symlinked skill folders, so pulling the clone updates the installed skill.
+
+To pin a fixed version instead, copy the folder:
+
+```sh
+cp -R "$PWD/plugins/agents-skills/skills/readme-writer" ~/.agents/skills/readme-writer
+```
+
+## Install for Claude Code
+
+Install the complete collection as a Claude Code plugin from its marketplace:
+
+```sh
+claude plugin marketplace add Punpun1643/agents-skills
+claude plugin install agents-skills@Punpun1643
+```
+
+Plugin skills are namespaced in Claude Code. For example, invoke the README skill with `/agents-skills:readme-writer`, or describe the task and let Claude select the skill automatically.
+
+### Install one standalone skill
+
+Clone the repository and create Claude Code's personal skills directory:
+
+```sh
+git clone https://github.com/Punpun1643/agents-skills.git
+cd agents-skills
 mkdir -p ~/.claude/skills
 ```
 
-Then pick one of the two install methods below.
-
-### Option 1: Symlink (tracks your clone)
-
-The installed skill points back at your clone, so a `git pull` updates it automatically. Best if you want your installed skills to always stay up to date.
-
-Install one skill:
-
-```sh
-ln -s "$PWD/readme-writer" ~/.claude/skills/readme-writer
-```
-
-Install all skills:
+Install all skills as symlinks so they track the clone:
 
 ```sh
 for d in dev-guide excalidraw git-commit product-designer readme-writer; do
-  ln -s "$PWD/$d" ~/.claude/skills/"$d"
+  ln -s "$PWD/plugins/agents-skills/skills/$d" ~/.claude/skills/"$d"
 done
 ```
 
-### Option 2: Copy (pins a fixed version)
-
-The installed skill is an independent copy frozen at the current state (updating the clone won't change it until you copy again). Best if you want a stable snapshot.
-
-Install one skill:
-
-```sh
-cp -r "$PWD/readme-writer" ~/.claude/skills/readme-writer
-```
-
-Install all skills:
+Or install a fixed snapshot by replacing `ln -s` with `cp -R`:
 
 ```sh
 for d in dev-guide excalidraw git-commit product-designer readme-writer; do
-  cp -r "$PWD/$d" ~/.claude/skills/"$d"
+  cp -R "$PWD/plugins/agents-skills/skills/$d" ~/.claude/skills/"$d"
 done
 ```
-
-## Usage
-
-Skills are invoked two ways:
-
-- **Automatically** — Claude reads each skill's `description` and triggers the matching one when your request fits. Ask "write a commit message for this" and `git-commit` engages; "make a readme for this repo" pulls in `readme-writer`.
-- **Explicitly** — call it as a slash command, e.g. `/readme-writer` or `/git-commit`.
 
 ## License
 
-Released under the [MIT License](LICENSE).
+Released under the [MIT License](LICENSE). The adapted Excalidraw skill also includes its [upstream attribution](plugins/agents-skills/skills/excalidraw/LICENSE).

@@ -10,7 +10,7 @@ Complete reference for Excalidraw JSON structure and element types.
 {
   "type": "excalidraw",
   "version": 2,
-  "source": "claude-code-excalidraw-skill",
+  "source": "excalidraw-skill",
   "elements": [],
   "appState": {
     "gridSize": 20,
