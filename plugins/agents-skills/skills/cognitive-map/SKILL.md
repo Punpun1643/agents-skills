@@ -4,8 +4,9 @@ description: >-
   Build a cognitive map for learning a topic. Use when the user wants to learn,
   understand, study, explore, or get oriented in a subject, especially when they
   want to understand why concepts matter, how ideas connect, what depends on what,
-  what alternative paths exist, and what to learn next. Do not merely produce a
-  syllabus or an exhaustive list of subtopics.
+  what alternative paths exist, and what to learn next. Produce Markdown and an
+  interactive local webpage when file writing is available. Do not merely produce
+  a syllabus or an exhaustive list of subtopics.
 ---
 
 # Cognitive Map Generator
@@ -476,6 +477,12 @@ The next 1–3 concepts with the greatest unlocking power.
 ### Do not worry about yet
 
 Advanced or peripheral concepts that would create unnecessary cognitive load.
+
+---
+
+## Step 10 — Publish the interactive map
+
+When file writing is available, read [the web-view instructions](references/web-view.md) completely. Save the Markdown source and use the bundled renderer to create the clickable HTML learning interface. Return the webpage link first and the Markdown source second.
 
 ---
 

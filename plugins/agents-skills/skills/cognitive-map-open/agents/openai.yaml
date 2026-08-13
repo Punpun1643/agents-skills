@@ -1,0 +1,4 @@
+interface:
+  display_name: "Open Cognitive Map"
+  short_description: "Open an interactive cognitive map in your browser"
+  default_prompt: "Use $cognitive-map-open to open the interactive cognitive map for this project."
