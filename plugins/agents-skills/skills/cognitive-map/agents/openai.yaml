@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cognitive Map"
+  short_description: "Map concepts, dependencies, and learning paths"
+  default_prompt: "Use $cognitive-map to build a goal-oriented learning map for this topic."

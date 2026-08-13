@@ -6,12 +6,25 @@ A collection of portable [Agent Skills](https://agentskills.io/) for Claude Code
 
 | Skill | What it does | Credit |
 | --- | --- | --- |
+| [`cognitive-map`](plugins/agents-skills/skills/cognitive-map/SKILL.md) | Build a goal-oriented map of a topic's core concepts, dependencies, branches, and learning paths. | — |
 | [`dev-guide`](plugins/agents-skills/skills/dev-guide/SKILL.md) | Create and maintain a repository's developer or architecture guide, grounded in real code. | — |
 | [`excalidraw`](plugins/agents-skills/skills/excalidraw/SKILL.md) | Generate architecture diagrams as editable `.excalidraw` files, with optional PNG/SVG export. | Adapted from [ooiyeefei/ccc](https://github.com/ooiyeefei/ccc/tree/main/skills/excalidraw) |
 | [`git-commit`](plugins/agents-skills/skills/git-commit/SKILL.md) | Write Conventional Commits and split a working tree into clean, independent commits. | Based on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) |
 | [`product-designer`](plugins/agents-skills/skills/product-designer/SKILL.md) | Turn a rough product idea into a testable, buildable MVP brief. | HCD principles from [_The Design of Everyday Things_](https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things) |
 | [`readme-writer`](plugins/agents-skills/skills/readme-writer/SKILL.md) | Write or improve a project's README without fabricating commands, badges, or behavior. | Based on [makeareadme.com](https://www.makeareadme.com) |
 | [`teach`](https://www.aihero.dev/skills-teach) | Turn the current directory into a stateful, multi-session learning workspace with short, citation-grounded lessons. | By Matt Pocock — [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/productivity/teach) (MIT) |
+
+---
+
+### cognitive-map
+
+Build a cognitive map that helps a learner get oriented in an unfamiliar subject.
+
+- Identifies the central question and the smallest high-leverage conceptual spine.
+- Shows prerequisites, relationships, major branches, and alternative learning paths.
+- Includes misconceptions, negative expertise, and a practical learning frontier.
+
+Invoke with `$cognitive-map` in Codex, `/agents-skills:cognitive-map` when installed as a Claude Code plugin, `/cognitive-map` as a standalone Claude skill, or ask to “map this topic for me.”
 
 ---
 
@@ -81,7 +94,7 @@ Invoke with `$readme-writer` in Codex, `/readme-writer` in Claude Code, or ask t
 
 ## Install for Codex
 
-The repository is packaged as a [Codex plugin](https://developers.openai.com/plugins/build/plugins), so all five skills can be installed together from its marketplace:
+The repository is packaged as a [Codex plugin](https://developers.openai.com/plugins/build/plugins), so all six skills can be installed together from its marketplace:
 
 ```sh
 codex plugin marketplace add Punpun1643/agents-skills
@@ -133,7 +146,7 @@ mkdir -p ~/.claude/skills
 Install all skills as symlinks so they track the clone:
 
 ```sh
-for d in dev-guide excalidraw git-commit product-designer readme-writer; do
+for d in cognitive-map dev-guide excalidraw git-commit product-designer readme-writer; do
   ln -s "$PWD/plugins/agents-skills/skills/$d" ~/.claude/skills/"$d"
 done
 ```
@@ -141,7 +154,7 @@ done
 Or install a fixed snapshot by replacing `ln -s` with `cp -R`:
 
 ```sh
-for d in dev-guide excalidraw git-commit product-designer readme-writer; do
+for d in cognitive-map dev-guide excalidraw git-commit product-designer readme-writer; do
   cp -R "$PWD/plugins/agents-skills/skills/$d" ~/.claude/skills/"$d"
 done
 ```
