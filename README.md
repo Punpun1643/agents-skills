@@ -146,7 +146,7 @@ mkdir -p ~/.claude/skills
 Install all skills as symlinks so they track the clone:
 
 ```sh
-for d in cognitive-map dev-guide excalidraw git-commit product-designer readme-writer; do
+for d in cognitive-map cognitive-map-open dev-guide excalidraw git-commit product-designer readme-writer; do
   ln -s "$PWD/plugins/agents-skills/skills/$d" ~/.claude/skills/"$d"
 done
 ```
@@ -154,7 +154,7 @@ done
 Or install a fixed snapshot by replacing `ln -s` with `cp -R`:
 
 ```sh
-for d in cognitive-map dev-guide excalidraw git-commit product-designer readme-writer; do
+for d in cognitive-map cognitive-map-open dev-guide excalidraw git-commit product-designer readme-writer; do
   cp -R "$PWD/plugins/agents-skills/skills/$d" ~/.claude/skills/"$d"
 done
 ```
