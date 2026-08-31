@@ -117,6 +117,16 @@ codex plugin add agents-skills@Punpun1643
 
 Start a new Codex session after installing. Run `/skills` to browse what landed, name one with `$skill-name`, or describe the task and let Codex pick.
 
+### Upgrade the Codex marketplace
+
+Refresh the installed Git marketplace snapshot with its configured marketplace name:
+
+```sh
+codex plugin marketplace upgrade Punpun1643
+```
+
+The upgrade command expects `Punpun1643`, not the GitHub repository slug `Punpun1643/agents-skills`.
+
 ### Install one standalone skill
 
 Clone the repository, then symlink one skill into Codex's personal skills directory:
