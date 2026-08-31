@@ -13,6 +13,7 @@ A collection of portable [Agent Skills](https://agentskills.io/) for Claude Code
 | [`product-designer`](plugins/agents-skills/skills/product-designer/SKILL.md) | Turn a rough product idea into a testable, buildable MVP brief. | HCD principles from [_The Design of Everyday Things_](https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things) |
 | [`readme-writer`](plugins/agents-skills/skills/readme-writer/SKILL.md) | Write or improve a project's README without fabricating commands, badges, or behavior. | Based on [makeareadme.com](https://www.makeareadme.com) |
 | [`teach`](https://www.aihero.dev/skills-teach) | Turn the current directory into a stateful, multi-session learning workspace with short, citation-grounded lessons. | By Matt Pocock — [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/productivity/teach) (MIT) |
+| [`unslop`](plugins/agents-skills/skills/unslop/SKILL.md) | Cut AI tells from any writing and give it a human voice. | Adapted from [cursor/plugins](https://github.com/cursor/plugins/blob/main/pstack/skills/unslop/SKILL.md) (MIT) |
 
 ---
 
@@ -92,9 +93,22 @@ Write, overhaul, or fix a project's README.
 
 Invoke with `$readme-writer` in Codex, `/readme-writer` in Claude Code, or ask to “make a README” or “document this project.”
 
+---
+
+### unslop
+
+Edit prose so it stops reading like a language model wrote it.
+
+- Names 31 concrete tells across content, language, style, filler, and jargon, each with the rewrite that fixes it.
+- Bans em dashes, colon-as-connector, restated bold labels, and title case headings.
+- Pushes for active voice, plain words, and sentences that carry a fact instead of a feeling.
+- Treats voice as part of the job, not just pattern removal, so the result reads like a person rather than a sanitized draft.
+
+Invoke with `$unslop` in Codex, `/unslop` in Claude Code, or ask to “unslop this” or “make this sound human.” It also works as a last pass over anything an agent just wrote.
+
 ## Install for Codex
 
-The repository is packaged as a [Codex plugin](https://developers.openai.com/plugins/build/plugins), so all six skills can be installed together from its marketplace:
+The repository is packaged as a [Codex plugin](https://developers.openai.com/plugins/build/plugins), so all eight skills can be installed together from its marketplace:
 
 ```sh
 codex plugin marketplace add Punpun1643/agents-skills
@@ -146,7 +160,7 @@ mkdir -p ~/.claude/skills
 Install all skills as symlinks so they track the clone:
 
 ```sh
-for d in cognitive-map cognitive-map-open dev-guide excalidraw git-commit product-designer readme-writer; do
+for d in cognitive-map cognitive-map-open dev-guide excalidraw git-commit product-designer readme-writer unslop; do
   ln -s "$PWD/plugins/agents-skills/skills/$d" ~/.claude/skills/"$d"
 done
 ```
@@ -154,11 +168,11 @@ done
 Or install a fixed snapshot by replacing `ln -s` with `cp -R`:
 
 ```sh
-for d in cognitive-map cognitive-map-open dev-guide excalidraw git-commit product-designer readme-writer; do
+for d in cognitive-map cognitive-map-open dev-guide excalidraw git-commit product-designer readme-writer unslop; do
   cp -R "$PWD/plugins/agents-skills/skills/$d" ~/.claude/skills/"$d"
 done
 ```
 
 ## License
 
-Released under the [MIT License](LICENSE). The adapted Excalidraw skill also includes its [upstream attribution](plugins/agents-skills/skills/excalidraw/LICENSE).
+Released under the [MIT License](LICENSE). The adapted Excalidraw and Unslop skills also include their upstream attribution: [excalidraw](plugins/agents-skills/skills/excalidraw/LICENSE), [unslop](plugins/agents-skills/skills/unslop/LICENSE).

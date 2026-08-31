@@ -1,7 +1,7 @@
 {
   "name": "agents-skills",
   "version": "0.2.0+codex.20260813084524",
-  "description": "A focused collection of reusable learning, documentation, product design, diagramming, and Git workflow skills.",
+  "description": "A focused collection of reusable learning, documentation, product design, diagramming, prose editing, and Git workflow skills.",
   "author": {
     "name": "Punpun1643",
     "url": "https://github.com/Punpun1643"
@@ -18,8 +18,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Punpun's Agent Skills",
-    "shortDescription": "Seven skills for learning, docs, design, diagrams, and Git",
-    "longDescription": "Build and open interactive cognitive maps for learning, create accurate developer guides and READMEs, design buildable MVP briefs, generate editable Excalidraw architecture diagrams, and organize changes into clean Conventional Commits.",
+    "shortDescription": "Eight skills for learning, docs, design, diagrams, editing, and Git",
+    "longDescription": "Build and open interactive cognitive maps for learning, create accurate developer guides and READMEs, design buildable MVP briefs, generate editable Excalidraw architecture diagrams, strip AI tells out of prose, and organize changes into clean Conventional Commits.",
     "developerName": "Punpun1643",
     "category": "Productivity",
     "capabilities": [
@@ -32,6 +32,7 @@
       "Use $cognitive-map-open to open the interactive cognitive map for this project.",
       "Use $readme-writer to improve this repository's README.",
       "Use $dev-guide to document this codebase's architecture.",
+      "Use $unslop to strip the AI tells out of this draft.",
       "Use $git-commit to organize these changes into clean commits."
     ]
   }

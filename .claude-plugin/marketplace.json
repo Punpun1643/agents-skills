@@ -7,7 +7,7 @@
     {
       "name": "agents-skills",
       "source": "./plugins/agents-skills",
-      "description": "A focused collection of reusable learning, documentation, product design, diagramming, and Git workflow skills.",
+      "description": "A focused collection of reusable learning, documentation, product design, diagramming, prose editing, and Git workflow skills.",
       "category": "Productivity"
     }
   ]
