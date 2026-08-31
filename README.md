@@ -12,7 +12,7 @@ A collection of portable [Agent Skills](https://agentskills.io/) for Claude Code
 | [`git-commit`](plugins/agents-skills/skills/git-commit/SKILL.md) | Write Conventional Commits and split a working tree into clean, independent commits. | Based on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) |
 | [`product-designer`](plugins/agents-skills/skills/product-designer/SKILL.md) | Turn a rough product idea into a testable, buildable MVP brief. | HCD principles from [_The Design of Everyday Things_](https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things) |
 | [`readme-writer`](plugins/agents-skills/skills/readme-writer/SKILL.md) | Write or improve a project's README without fabricating commands, badges, or behavior. | Based on [makeareadme.com](https://www.makeareadme.com) |
-| [`teach`](https://www.aihero.dev/skills-teach) | Turn the current directory into a stateful, multi-session learning workspace with short, citation-grounded lessons. | By Matt Pocock — [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/productivity/teach) (MIT) |
+| [`teach`](https://www.aihero.dev/skills-teach) | Turn the current directory into a stateful, multi-session learning workspace with short, citation-grounded lessons. | By Matt Pocock, [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/productivity/teach) (MIT) |
 | [`unslop`](plugins/agents-skills/skills/unslop/SKILL.md) | Cut AI tells from any writing and give it a human voice. | Adapted from [cursor/plugins](https://github.com/cursor/plugins/blob/main/pstack/skills/unslop/SKILL.md) (MIT) |
 
 ---
@@ -25,7 +25,7 @@ Build a cognitive map that helps a learner get oriented in an unfamiliar subject
 - Shows prerequisites, relationships, major branches, and alternative learning paths.
 - Includes misconceptions, negative expertise, and a practical learning frontier.
 
-Invoke with `$cognitive-map` in Codex, `/agents-skills:cognitive-map` when installed as a Claude Code plugin, `/cognitive-map` as a standalone Claude skill, or ask to “map this topic for me.”
+Invoke with `$cognitive-map` in Codex, `/agents-skills:cognitive-map` when installed as a Claude Code plugin, `/cognitive-map` as a standalone Claude skill, or ask to "map this topic for me."
 
 ---
 
@@ -38,7 +38,7 @@ Create and maintain a repository's developer or architecture guide.
 - Links components to their source and traces real data and control flows.
 - Includes references for [guide structure](plugins/agents-skills/skills/dev-guide/references/structure.md) and [diagrams](plugins/agents-skills/skills/dev-guide/references/diagrams.md).
 
-Invoke with `$dev-guide` in Codex, `/dev-guide` in Claude Code, or ask to “update the dev guide” or “document this module.”
+Invoke with `$dev-guide` in Codex, `/dev-guide` in Claude Code, or ask to "update the dev guide" or "document this module."
 
 ---
 
@@ -51,7 +51,7 @@ Generate architecture diagrams as editable `.excalidraw` files from codebase ana
 - Handles arrow routing, bindings, and staggering to reduce overlap.
 - Can export to PNG or SVG with Playwright.
 
-Invoke with `$excalidraw` in Codex, `/excalidraw` in Claude Code, or ask to “create an architecture diagram.”
+Invoke with `$excalidraw` in Codex, `/excalidraw` in Claude Code, or ask to "create an architecture diagram."
 
 ---
 
@@ -67,7 +67,7 @@ _The commits in this capture were written using the skill._
 - Splits mixed changes into independent, self-contained commits.
 - Applies Conventional Commits types, scopes, breaking changes, and SemVer mapping.
 
-Invoke with `$git-commit` in Codex, `/git-commit` in Claude Code, or ask to “commit this” or “write a commit message.”
+Invoke with `$git-commit` in Codex, `/git-commit` in Claude Code, or ask to "commit this" or "write a commit message."
 
 ---
 
@@ -79,7 +79,7 @@ Turn a rough product idea into a focused MVP brief.
 - Makes requirements testable and traceable to user needs.
 - Applies human-centered design principles throughout the workflow.
 
-Invoke with `$product-designer` in Codex, `/product-designer` in Claude Code, or ask to “write a PRD” or “turn this idea into an MVP plan.”
+Invoke with `$product-designer` in Codex, `/product-designer` in Claude Code, or ask to "write a PRD" or "turn this idea into an MVP plan."
 
 ---
 
@@ -91,7 +91,7 @@ Write, overhaul, or fix a project's README.
 - Verifies commands, examples, configuration, and badges against the repository.
 - Adapts its structure for libraries, CLIs, research/ML projects, and web services.
 
-Invoke with `$readme-writer` in Codex, `/readme-writer` in Claude Code, or ask to “make a README” or “document this project.”
+Invoke with `$readme-writer` in Codex, `/readme-writer` in Claude Code, or ask to "make a README" or "document this project."
 
 ---
 
@@ -104,7 +104,7 @@ Edit prose so it stops reading like a language model wrote it.
 - Pushes for active voice, plain words, and sentences that carry a fact instead of a feeling.
 - Treats voice as part of the job, not just pattern removal, so the result reads like a person rather than a sanitized draft.
 
-Invoke with `$unslop` in Codex, `/unslop` in Claude Code, or ask to “unslop this” or “make this sound human.” It also works as a last pass over anything an agent just wrote.
+Invoke with `$unslop` in Codex, `/unslop` in Claude Code, or ask to "unslop this" or "make this sound human." It also works as a last pass over anything an agent just wrote.
 
 ## Install for Codex
 
