@@ -1,6 +1,6 @@
 ---
 name: unslop
-description: Cut AI tells from any writing and give it a human voice. Use this whenever you write or edit prose that a person will read, including READMEs, docs, commit bodies, PR descriptions, blog posts, emails, release notes, and chat replies, and whenever the user asks to "unslop this", "make this sound human", "remove the AI tells", "de-slop", or "edit this draft". Also use it as a final pass over prose you just generated yourself, even when nobody asked.
+description: Cut AI tells from any writing. Must always apply.
 ---
 
 # Unslop
