@@ -6,6 +6,7 @@ A collection of [Agent Skills](https://agentskills.io/) for Claude Code and Code
 
 | Skill | What it does | Credit |
 | --- | --- | --- |
+| [`anima`](plugins/agents-skills/skills/anima/SKILL.md) | Build interactive, sourced, isometric figures of anatomy, neurobiology, pharmacology, and cell biology. | By Natnael Getenew and Ryan, [Garinmckayl/anima](https://github.com/Garinmckayl/anima) (MIT) |
 | [`better-prompt`](plugins/agents-skills/skills/better-prompt/SKILL.md) | Deepen a prompt the way a top professional would, without making it bigger. | — |
 | [`cognitive-map`](plugins/agents-skills/skills/cognitive-map/SKILL.md) | Build a goal-oriented map of a topic's core concepts, dependencies, branches, and learning paths. | — |
 | [`dev-guide`](plugins/agents-skills/skills/dev-guide/SKILL.md) | Create and maintain a repository's developer or architecture guide, grounded in real code. | — |
@@ -15,6 +16,21 @@ A collection of [Agent Skills](https://agentskills.io/) for Claude Code and Code
 | [`readme-writer`](plugins/agents-skills/skills/readme-writer/SKILL.md) | Write or improve a project's README without fabricating commands, badges, or behavior. | Based on [makeareadme.com](https://www.makeareadme.com) |
 | [`teach`](https://www.aihero.dev/skills-teach) | Turn the current directory into a stateful, multi-session learning workspace with short, citation-grounded lessons. | By Matt Pocock, [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/productivity/teach) (MIT) |
 | [`unslop`](plugins/agents-skills/skills/unslop/SKILL.md) | Cut AI tells from any writing and give it a human voice. | Adapted from [cursor/plugins](https://github.com/cursor/plugins/blob/main/pstack/skills/unslop/SKILL.md) (MIT) |
+
+---
+
+### anima
+
+Build interactive figures that show how a biological structure works, with a source for every number on screen.
+
+- Draws real structures such as neurons, receptors, synapses, and organs, and labels any mechanical metaphor as one.
+- Adds toggles that change the mechanism, such as blocking a receptor or a transporter, with a live readout driven by a small model.
+- Ships seven worked examples, from a dopamine synapse to semaglutide on a beta cell, each built as a standalone HTML page.
+- Explains drug mechanisms only. No doses, routes, or recommendations.
+
+Vendored from [Garinmckayl/anima](https://github.com/Garinmckayl/anima). See its [live figures](https://anima.arcumet.com).
+
+Invoke with `$anima` in Codex, `/anima` in Claude Code, or ask for "an interactive figure of how this drug works."
 
 ---
 
@@ -122,7 +138,7 @@ Invoke with `$unslop` in Codex, `/unslop` in Claude Code, or ask to "unslop this
 
 ## Install for Codex
 
-The repository doubles as a [Codex plugin](https://developers.openai.com/plugins/build/plugins), so one marketplace install gets you all nine skills:
+The repository doubles as a [Codex plugin](https://developers.openai.com/plugins/build/plugins), so one marketplace install gets you all ten skills:
 
 ```sh
 codex plugin marketplace add Punpun1643/agents-skills
@@ -184,7 +200,7 @@ mkdir -p ~/.claude/skills
 Install all skills as symlinks so they track the clone:
 
 ```sh
-for d in better-prompt cognitive-map cognitive-map-open dev-guide excalidraw git-commit product-designer readme-writer unslop; do
+for d in anima better-prompt cognitive-map cognitive-map-open dev-guide excalidraw git-commit product-designer readme-writer unslop; do
   ln -s "$PWD/plugins/agents-skills/skills/$d" ~/.claude/skills/"$d"
 done
 ```
@@ -192,11 +208,11 @@ done
 Or install a fixed snapshot by replacing `ln -s` with `cp -R`:
 
 ```sh
-for d in better-prompt cognitive-map cognitive-map-open dev-guide excalidraw git-commit product-designer readme-writer unslop; do
+for d in anima better-prompt cognitive-map cognitive-map-open dev-guide excalidraw git-commit product-designer readme-writer unslop; do
   cp -R "$PWD/plugins/agents-skills/skills/$d" ~/.claude/skills/"$d"
 done
 ```
 
 ## License
 
-Released under the [MIT License](LICENSE). The adapted Excalidraw and Unslop skills also include their upstream attribution: [excalidraw](plugins/agents-skills/skills/excalidraw/LICENSE), [unslop](plugins/agents-skills/skills/unslop/LICENSE).
+Released under the [MIT License](LICENSE). The adapted Anima, Excalidraw, and Unslop skills also include their upstream licenses: [anima](plugins/agents-skills/skills/anima/LICENSE), [excalidraw](plugins/agents-skills/skills/excalidraw/LICENSE), [unslop](plugins/agents-skills/skills/unslop/LICENSE).
