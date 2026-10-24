@@ -1,0 +1,4 @@
+interface:
+  display_name: "Better Prompt"
+  short_description: "Deepen a prompt the way a top professional would"
+  default_prompt: "Use $better-prompt to deepen this prompt without making it bigger."
