@@ -1,0 +1,4 @@
+interface:
+  display_name: "Anima"
+  short_description: "Build interactive, sourced biology figures"
+  default_prompt: "Use $anima to build an interactive, sourced figure of this biological mechanism."
